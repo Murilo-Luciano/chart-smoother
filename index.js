@@ -1,4 +1,4 @@
-function chartSmother(points, iterations) {
+function chartSmother(points, iterations = 1) {
   if (iterations === 0) {
     return points;
   }
