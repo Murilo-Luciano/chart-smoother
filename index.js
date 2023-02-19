@@ -4,20 +4,31 @@ function chartSmother(points, iterations) {
     return points;
   }
 
-  const smoothedPoints = [];
+  const smoothedPoints = [points[0]];
 
   for (let i = 0; i < points.length - 1; i++) {
-    const p1 = points[i];
-    const p2 = points[i + 1];
+    const currentPoint = points[i];
+    const nextPoint = points[i + 1];
 
-    const q1 = [0.75 * p1[0] + 0.25 * p2[0], 0.75 * p1[1] + 0.25 * p2[1]];
+    const currentX = currentPoint[0];
+    const currentY = currentPoint[1];
 
-    const q2 = [0.25 * p1[0] + 0.75 * p2[0], 0.25 * p1[1] + 0.75 * p2[1]];
+    const nextX = nextPoint[0];
+    const nextY = nextPoint[1];
 
-    smoothedPoints.push(q1, q2);
+    const firstNewPoint = [
+      0.75 * currentX + 0.25 * nextX,
+      0.75 * currentY + 0.25 * nextY,
+    ];
+
+    const secondNewPoint = [
+      0.25 * currentX + 0.75 * nextX,
+      0.25 * currentY + 0.75 * nextY,
+    ];
+
+    smoothedPoints.push(firstNewPoint, secondNewPoint);
   }
 
-  smoothedPoints.unshift(points[0]);
   smoothedPoints.push(points[points.length - 1]);
 
   return chartSmother(smoothedPoints, iterations - 1);
