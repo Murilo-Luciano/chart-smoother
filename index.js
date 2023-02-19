@@ -33,4 +33,4 @@ function chartSmother(points, iterations) {
   return chartSmother(smoothedPoints, iterations - 1);
 }
 
-module.export = chartSmother;
+module.exports = chartSmother;
