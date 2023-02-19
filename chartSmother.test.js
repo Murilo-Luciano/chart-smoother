@@ -6,7 +6,7 @@ test("smoothes a set of points on one iteration", () => {
     [2, 2],
     [3, 3],
     [4, 1],
-    [5, 0, 5],
+    [5, 0],
     [6, 0],
   ];
 
@@ -34,7 +34,7 @@ test("smoothes a set of points on two iteration", () => {
     [2, 2],
     [3, 3],
     [4, 1],
-    [5, 0, 5],
+    [5, 0],
     [6, 0],
   ];
 
