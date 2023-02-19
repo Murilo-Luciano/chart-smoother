@@ -64,6 +64,16 @@ console.log(smoothedPoints);
 //   [6, 0],
 // ]
 ```
+#### Visual representation
+
+Initial dataset:
+
+![image](https://user-images.githubusercontent.com/61948229/219982541-edc3ab6b-3d93-4157-888e-e3a023c01dbb.png)
+
+Final dataset after `chartSmother` with two iterations:
+
+![image](https://user-images.githubusercontent.com/61948229/219982562-4738407f-37d4-4a1f-935c-0c81dab4dd69.png)
+
 
 ## Contributing
 
