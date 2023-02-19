@@ -1,29 +1,24 @@
-/**@todo: make recursive */
 /**@todo: module export */
-function chartSmoother(arr) {
-  const result = [];
-
-  for (var i = 0; i < arr.length; i++) {
-    const currentPoint = arr[i];
-    const nextPoint = arr[i + 1];
-    if (!nextPoint) break;
-
-    const currentX = currentPoint[0];
-    const currentY = currentPoint[1];
-
-    const nextX = nextPoint[0];
-    const nextY = nextPoint[1];
-
-    const newPoint = [
-      currentX * (3 / 4) + nextX * (1 / 4),
-      currentY * (3 / 4) + nextY * (1 / 4),
-    ];
-
-    result.push(newPoint);
+function chartSmother(points, iterations) {
+  if (iterations === 0) {
+    return points;
   }
 
-  result.push(arr[arr.length - 1]);
-  result.unshift(arr[0]);
+  const smoothedPoints = [];
 
-  return result;
+  for (let i = 0; i < points.length - 1; i++) {
+    const p1 = points[i];
+    const p2 = points[i + 1];
+
+    const q1 = [0.75 * p1[0] + 0.25 * p2[0], 0.75 * p1[1] + 0.25 * p2[1]];
+
+    const q2 = [0.25 * p1[0] + 0.75 * p2[0], 0.25 * p1[1] + 0.75 * p2[1]];
+
+    smoothedPoints.push(q1, q2);
+  }
+
+  smoothedPoints.unshift(points[0]);
+  smoothedPoints.push(points[points.length - 1]);
+
+  return chartSmother(smoothedPoints, iterations - 1);
 }
