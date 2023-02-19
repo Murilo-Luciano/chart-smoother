@@ -1,4 +1,3 @@
-/**@todo: module export */
 function chartSmother(points, iterations) {
   if (iterations === 0) {
     return points;
