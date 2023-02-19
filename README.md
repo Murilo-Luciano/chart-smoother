@@ -24,17 +24,33 @@ Here's an example of how to use the `chart-smoother` module:
 const chartSmother = require("chart-smoother");
 
 const points = [
-  [1, 1],
-  [2, 3],
-  [3, 2],
-  [4, 4],
+  [0, 0],
+  [2, 2],
+  [3, 3],
+  [4, 1],
+  [5, 0, 5],
+  [6, 0],
 ];
 const iterations = 2;
 
 const smoothedPoints = chartSmother(points, iterations);
 
 console.log(smoothedPoints);
-// Output: [[1, 1], [1.5, 2], [2, 2.5], [2.5, 2.25], [2.75, 2.75], [3.25, 3.25], [3.5, 3.5], [4, 4]]
+// Output:
+// [
+//   [0, 0],
+//   [0.5, 0.5],
+//   [1.5, 1.5],
+//   [2.25, 2.25],
+//   [2.75, 2.75],
+//   [3.25, 2.5],
+//   [3.75, 1.5],
+//   [4.25, 0.75],
+//   [4.75, 0.25],
+//   [5.25, 0],
+//   [5.75, 0],
+//   [6, 0],
+// ]
 ```
 
 ## Contributing
