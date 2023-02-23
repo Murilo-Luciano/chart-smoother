@@ -23,6 +23,7 @@ Here's an example of how to use the `chart-smoother` module:
 ```javascript
 const chartSmother = require("chart-smoother");
 
+// [x,y] array
 const points = [
   [0, 0],
   [2, 2],
