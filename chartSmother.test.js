@@ -1,4 +1,4 @@
-const chartSmother = require("./index.js");
+import { chartSmother } from ".";
 
 test("smoothes a set of points on one iteration", () => {
   const points = [

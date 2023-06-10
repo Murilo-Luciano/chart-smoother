@@ -1,4 +1,4 @@
-function chartSmother(points, iterations = 1) {
+export function chartSmother(points, iterations = 1) {
   if (iterations === 0) {
     return points;
   }
@@ -32,5 +32,3 @@ function chartSmother(points, iterations = 1) {
 
   return chartSmother(smoothedPoints, iterations - 1);
 }
-
-module.exports = chartSmother;
