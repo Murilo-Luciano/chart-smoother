@@ -1,4 +1,4 @@
-import { chartSmother } from ".";
+import { chartSmoother } from ".";
 
 test("smoothes a set of points on one iteration", () => {
   const points = [
@@ -10,7 +10,7 @@ test("smoothes a set of points on one iteration", () => {
     [6, 0],
   ];
 
-  const smoothedPoints = chartSmother(points);
+  const smoothedPoints = chartSmoother(points);
 
   expect(smoothedPoints).toEqual([
     [0, 0],
@@ -38,7 +38,7 @@ test("smoothes a set of points on two iteration", () => {
     [6, 0],
   ];
 
-  const smoothedPoints = chartSmother(points, 2);
+  const smoothedPoints = chartSmoother(points, 2);
 
   expect(smoothedPoints).toEqual([
     [0, 0],

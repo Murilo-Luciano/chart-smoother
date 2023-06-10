@@ -12,7 +12,7 @@ npm install chart-smoother
 
 ## Usage
 
-The `chart-smoother` module exports a single function, `chartSmother(points, iterations)`, which takes an array of points and the number of smoothing iterations to perform. The function uses the Chaikin's algorithm to smooth the points.
+The `chart-smoother` module exports a single function, `chartSmoother(points, iterations)`, which takes an array of points and the number of smoothing iterations to perform. The function uses the Chaikin's algorithm to smooth the points.
 
 ### Chaikin's Algorithm
 
@@ -21,7 +21,7 @@ The `chart-smoother` module exports a single function, `chartSmother(points, ite
 Here's an example of how to use the `chart-smoother` module:
 
 ```javascript
-const chartSmother = require("chart-smoother");
+const chartSmoother = require("chart-smoother");
 
 // [x,y] array
 const points = [
@@ -34,7 +34,7 @@ const points = [
 ];
 const iterations = 2;
 
-const smoothedPoints = chartSmother(points, iterations);
+const smoothedPoints = chartSmoother(points, iterations);
 
 console.log(smoothedPoints);
 // Output:
@@ -65,16 +65,16 @@ console.log(smoothedPoints);
 //   [6, 0],
 // ]
 ```
+
 #### Visual representation
 
 Initial dataset:
 
 ![image](https://user-images.githubusercontent.com/61948229/219982541-edc3ab6b-3d93-4157-888e-e3a023c01dbb.png)
 
-Final dataset after `chartSmother` with two iterations:
+Final dataset after `chartSmoother` with two iterations:
 
 ![image](https://user-images.githubusercontent.com/61948229/219982562-4738407f-37d4-4a1f-935c-0c81dab4dd69.png)
-
 
 ## Contributing
 

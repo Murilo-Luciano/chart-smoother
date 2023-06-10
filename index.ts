@@ -11,11 +11,11 @@ const points = [
   [4, 1],
 ];
 
-const smoothedPoints = chartSmother(points)
+const smoothedPoints = chartSmoother(points)
 console.log(smoothedPoints)
 // => [ [ 0, 0 ], [ 0.5, 0.5 ], [ 1.5, 1.5 ], [ 2.25, 2.25 ], [ 2.75, 2.75 ], [ 3.25, 2.5 ], [ 3.75, 1.5 ], [ 4, 1 ] ]
 */
-export function chartSmother(points: number[][], iterations = 1): number[][] {
+export function chartSmoother(points: number[][], iterations = 1): number[][] {
   if (iterations === 0) {
     return points;
   }
@@ -47,5 +47,5 @@ export function chartSmother(points: number[][], iterations = 1): number[][] {
 
   smoothedPoints.push(points[points.length - 1]);
 
-  return chartSmother(smoothedPoints, iterations - 1);
+  return chartSmoother(smoothedPoints, iterations - 1);
 }
