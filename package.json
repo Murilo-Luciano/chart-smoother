@@ -2,10 +2,19 @@
   "name": "chart-smoother",
   "version": "1.0.1",
   "description": "Package to make your chart smoother",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
+  "devDependencies": {
+    "jest": "^29.4.3",
+    "typescript": "^5.1.3"
+  },
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Murilo-Luciano/chart-smoother.git"
@@ -16,7 +25,12 @@
     "url": "https://github.com/Murilo-Luciano/chart-smoother/issues"
   },
   "homepage": "https://github.com/Murilo-Luciano/chart-smoother#readme",
-  "devDependencies": {
-    "jest": "^29.4.3"
-  }
+  "keywords": [
+    "chart",
+    "smoother",
+    "chaikin",
+    "curve",
+    "smoothing",
+    "algorithm"
+  ]
 }
